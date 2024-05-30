@@ -1,46 +1,19 @@
+Here is the  Libraries and Constants
 
-This directory is intended for project specific (private) libraries.
-PlatformIO will compile them to static libraries and link into executable file.
+#include <WiFi.h>
+#include "fauxmoESP.h"
 
-The source code of each library should be placed in an own separate directory
-("lib/your_library_name/[here are source files]").
+#define SERIAL_BAUDRATE 115200
 
-For example, see a structure of the following two libraries `Foo` and `Bar`:
+#define WIFI_SSID "IoTPrivate"
+#define WIFI_PASS "iotprivate303"
 
-|--lib
-|  |
-|  |--Bar
-|  |  |--docs
-|  |  |--examples
-|  |  |--src
-|  |     |- Bar.c
-|  |     |- Bar.h
-|  |  |- library.json (optional, custom build options, etc) https://docs.platformio.org/page/librarymanager/config.html
-|  |
-|  |--Foo
-|  |  |- Foo.c
-|  |  |- Foo.h
-|  |
-|  |- README --> THIS FILE
-|
-|- platformio.ini
-|--src
-   |- main.c
+#define LED_PIN_1 12
+#define LED_PIN_2 14
 
-and a contents of `src/main.c`:
-```
-#include <Foo.h>
-#include <Bar.h>
+#define LED_1 "led one"
+#define LED_2 "led two"
+#define BOTH_LEDS "both lamps"
 
-int main (void)
-{
-  ...
-}
-
-```
-
-PlatformIO Library Dependency Finder will find automatically dependent
-libraries scanning project source files.
-
-More information about PlatformIO Library Dependency Finder
-- https://docs.platformio.org/page/librarymanager/ldf.html
+- Libraries: Includes the necessary libraries for Wi-Fi and the fauxmoESP functionality.
+- Constants: Defines Wi-Fi credentials, LED pins, and device names recognized by Alexa.
